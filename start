@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/opt/projetos/Django-Site/bin/python /opt/projetos/Django-Site/django_portal/manage.py runserver
+
+#http://www.aprendendodjango.com/

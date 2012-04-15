@@ -1,0 +1,14 @@
+{% load portal_extra %}
+<div class="sidebar">
+	<div class="sidebar_item">
+    	<h2>Últimas Notícias</h2>
+		{% for new in somevariable|get_RSS %}
+			<!--h4>{{ new.updated }}</h4-->
+			<p>{{ new.title }}</p>
+			<div class="button_small">
+		        <a href="{{ new.url }}" target="_blank">Leia Mais >></a>
+		     </div>
+		     <br />
+		{% endfor %}
+    </div> 
+</div>   		

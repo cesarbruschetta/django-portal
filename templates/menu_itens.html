@@ -1,0 +1,11 @@
+{% load portal_extra %}
+	<ul class="lavaLampWithImage" id="lava_menu">
+		<li class="{% ifequal request.path "/" %}current{% endifequal %}">
+          	<a href="/">Home</a>
+          </li>
+		{% for item in somevariable|get_Menu %}
+          <li class="{% if item.pagina.slug in request.path %}current{% endif %} ">
+          	<a href="{{ item.pagina.get_absolute_url }}">{{ item.titulo }}</a>
+          </li>
+       	{% endfor %}
+    </ul>

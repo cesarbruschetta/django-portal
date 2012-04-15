@@ -1,0 +1,72 @@
+{% load portal_extra %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title> {{ somevariable|get_Site }} | {% block title %}{% endblock %}</title>
+  <meta name="description" content="free website template" />
+  <meta name="keywords" content="enter your keywords here" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  
+  <link rel="stylesheet" type="text/css" href="/media/css/style.css" />
+  <script type="text/javascript" src="/media/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/media/js/jquery.easing.min.js"></script>
+  <!--script type="text/javascript" src="/media/js/image_fade.js"></script-->	
+  <script type="text/javascript" src="/media/js/jquery.lavalamp.min.js"></script>
+  
+  {% block external %}{% endblock %}
+  
+  <script type="text/javascript">
+    $(function() {$("#lava_menu").lavaLamp({fx: "backout",speed: 700});});
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div id="header">  
+	  <div id="menubar">
+		<!-- Memu do Portal -->
+		{% include "menu_itens.html" %}
+	    
+	    <div id="contact">
+	      <a href="http://twitter.com/cesarbruschetta" target="_blank">
+	      	<img src="/media/images/icons/twitter.png" alt="twitter" />
+	      </a>
+          <a href="http://www.facebook.com/cesarbruschetta" target="_blank">
+          	<img src="/media/images/icons/facebook.png" alt="facebook" />
+          </a>
+          <a href="http://www.linkedin.com/pub/cesar-bruschetta/32/a2b/382" target="_blank">
+          	<img src="/media/images/icons/linkedin.png" alt="linkedin" />
+          </a>
+	    </div>
+	  </div>	  
+    </div>			
+  
+    <div class="container_header"><p>&nbsp;</p></div>
+    <div id="site_content">
+      <div id="content">
+        <div class="content_item">
+          <!-- Conteudo do Site -->
+          <h1>{% block head %}{% endblock %}</h1>
+		  {% block content %}{% endblock %}
+									
+		</div>	
+	    <div class="sidebar_container">       
+			<!-- Coluna de Rss -->
+			{% include "columm_rss.html" %}
+
+         </div>	
+         <br style="clear:both;" />
+      </div>	
+    </div>	
+    <div id="footer">  
+	  <div id="footer_content">
+		    R. Coimbra, 567 - Vila Pires | Santo Andre - SP <br>
+		    Telefones  (11) 4453-5295 |	Celular  (11) 9163-1305<br>
+      </div>	
+    </div>	
+  </div>	
+  <div class="container_footer">&nbsp;</div>
+  <p style="float: left;padding: 0;">&nbsp;</p>
+  <p id="sobre">&copy; 2012 <a href="/media/sobre.html" target="popupwindow" onclick='window.open("/media/sobre.html", "popupwindow", "scrollbars=yes,width=590,height=360");return true'>Cesar Augusto</a> - Todos os direitos reservados</p>
+</body>
+</html>

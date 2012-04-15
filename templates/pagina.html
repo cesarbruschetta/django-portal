@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} {{ pagina.titulo }} {% endblock %}
+
+{% block head %} {{ pagina.titulo }} {% endblock %}
+
+{% block content %}
+	{% autoescape off %}
+    	{{ pagina.conteudo }}
+	{% endautoescape %}
+{% endblock%}
