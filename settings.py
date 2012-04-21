@@ -2,7 +2,7 @@
 # Django settings for django_portal project.
 import os
 
-DEBUG = False
+DEBUG = True
 ADMINS = (
      ('Cesar Augusto', 'cesarbruschetta@hotmail.com'),
 )
@@ -140,16 +140,28 @@ TINYMCE_JS_URL = MEDIA_URL + 'js/tiny_mce/tiny_mce.js'
     
 TINYMCE_JS_ROOT = MEDIA_ROOT + 'js/tiny_mce'
     
-TINYMCE_DEFAULT_CONFIG = {'plugins': "safari,pagebreak,table,save,advhr,emotions,insertdatetime,preview,media,searchreplace,print,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,inlinepopups,tabfocus",
-                          'theme': "advanced",
-                          'relative_urls': False}
-    
-TINYMCE_SPELLCHECKER = False
-    
-TINYMCE_COMPRESSOR = False
-    
+  
 #TINYMCE_FILEBROWSER (default: True if 'filebrowser' is in INSTALLED_APPS, else False)
      
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "safari,pagebreak,table,save,advhr,emotions,insertdatetime,preview,media,searchreplace,print,paste,directionality,fullscreen,\
+                noneditable,visualchars,nonbreaking,xhtmlxtras,inlinepopups,tabfocus,video",
+    
+    'theme': "advanced",
+    'theme_advanced_buttons1': "bold,separator,undo,redo,link,unlink,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|\
+                                ,bullist,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code",
+
+    'theme_advanced_buttons2': 'safari,pagebreak,table,save,advhr,emotions,insertdatetime,preview,media,print,\
+                                directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,inlinepopups,tabfocus,video',
+    
+    'theme_advanced_buttons3': '',
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align': "left",
+}
+
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = False
+
 
 
 
