@@ -20,6 +20,7 @@ Instalação
 	MySQL_python = 1.2.3
 	DateTime = 3.0
 	feedparser = 5.1.1
+	gunicorn = 0.14.2
 	
 Patch de correção do 'django-tinymce'
 	Alterar a linha do arquivo /tinymce/widget.py da lib  'django-tinymce', como descrito abaixo

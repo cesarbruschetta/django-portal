@@ -2,7 +2,7 @@
 # Django settings for django_portal project.
 import os
 
-DEBUG = True
+DEBUG = False
 ADMINS = (
      ('Cesar Augusto', 'cesarbruschetta@hotmail.com'),
 )
@@ -67,7 +67,12 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
+
+# Mounting a Django Application on a Subpath
+# Add FORCE_SCRIPT_NAME = 'path', where path is the path on the domain where the application is mounted.
+# For example, if the Django application were mounted on example.com/blog, settings.py would contain FORCE_SCRIPT_NAME = '/blog'. 
+FORCE_SCRIPT_NAME = None
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -131,6 +136,7 @@ INSTALLED_APPS = (
     # Meu sistema do Portal
     'portal',
     'tinymce',
+    'gunicorn',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

@@ -1,5 +1,10 @@
 #!/bin/bash
 
 /opt/projetos/Django-Site/bin/python /opt/projetos/Django-Site/django_portal/manage.py runserver
+#/opt/projetos/Django-Site/bin/python /opt/projetos/Django-Site/django_portal/manage.py run_gunicorn
 
 #http://www.aprendendodjango.com/
+
+#Produção
+#http://senko.net/en/django-nginx-gunicorn/
+#http://davidpoblador.com/run-django-apps-using-gunicorn-and-nginx/
