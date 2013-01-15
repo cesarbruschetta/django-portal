@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Django settings for django_portal project.
-import os
+import os, dj_database_url
 
 DEBUG = False
 ADMINS = (
@@ -11,16 +11,19 @@ PROJECT_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 MANAGERS = ADMINS
 TEMPLATE_DEBUG = DEBUG
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'mysql',      # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'DjangoPortal', # Or path to database file if using sqlite3.
-        'USER': 'root',         # Not used with sqlite3.
-        'PASSWORD': 'root',     # Not used with sqlite3.
-        'HOST': 'localhost',    # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '3306',         # Set to empty string for default. Not used with sqlite3.
-    }
-}
+DATABASES = {}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'mysql',      # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+#        'NAME': 'DjangoPortal', # Or path to database file if using sqlite3.
+#        'USER': 'root',         # Not used with sqlite3.
+#        'PASSWORD': 'root',     # Not used with sqlite3.
+#        'HOST': 'localhost',    # Set to empty string for localhost. Not used with sqlite3.
+#        'PORT': '3306',         # Set to empty string for default. Not used with sqlite3.
+#    }
+#}
+#Banco de Dados Para heroku
+DATABASES['default'] =  dj_database_url.config()
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

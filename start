@@ -1,6 +1,7 @@
 #!/bin/bash
+export DATABASE_URL='DATABASE_URL='mysql://bc01f9fbfb6655:cf7bfad9@us-cdbr-east-03.cleardb.com/heroku_b5c088e89813acc?reconnect=true'
 
-/opt/projetos/Django-Site/bin/python /opt/projetos/Django-Site/django_portal/manage.py runserver
+/home/cesaraugusto/projetos/Django-Portal/bin/python /home/cesaraugusto/projetos/Django-Portal/django_portal/manage.py runserver
 #/opt/projetos/Django-Site/bin/python /opt/projetos/Django-Site/django_portal/manage.py run_gunicorn
 
 #http://www.aprendendodjango.com/
