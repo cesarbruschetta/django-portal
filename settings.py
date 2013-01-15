@@ -118,7 +118,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request", 
 ) 
 
-ROOT_URLCONF = 'django_portal.urls'
+ROOT_URLCONF = 'djangoportal.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
